@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply flex flex-col min-h-screen bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-red-500 transition-colors duration-200;
+  }
+  .btn-outline {
+    @apply border border-gray-800 text-gray-800 px-5 py-2 rounded-full font-semibold hover:bg-gray-800 hover:text-white transition-colors duration-200;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition;
+  }
+  .card-hover {
+    @apply transition-transform duration-200 hover:scale-[1.02];
+  }
+}
+
+/* Mapbox */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+/* Star rating */
+.stars {
+  color: #fe424d;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+/* scrollbar-hide utility (replaces tailwindcss-scrollbar-hide plugin) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
