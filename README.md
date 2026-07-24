@@ -24,26 +24,6 @@ The project is divided into two main parts: a `backend` REST API and a `frontend
 | **Frontend**      | React, Vite, React Router, Tailwind CSS, Axios, Mapbox GL JS                                                                        
 | **Dev & Build**   | Vite, Nodemon, PostCSS                                                                                                   
 
-
-## Project Structure
-.
-├── backend/        # Express.js REST API
-│   ├── controllers/  # Route logic
-│   ├── models/       # Mongoose schemas
-│   ├── routes/       # API route definitions
-│   ├── public/       # Static assets (not used by React frontend)
-│   ├── utils/        # Utility helpers (e.g., mailer)
-│   └── app.js        # Main server entry point
-└── frontend/       # React SPA
-    ├── src/
-    │   ├── components/ # Reusable React components
-    │   ├── context/    # Global state management (Auth, Toast)
-    │   ├── pages/      # Route-level components
-    │   ├── utils/      # API client
-    │   └── App.jsx     # Main application component with routing
-    └── vite.config.js  # Vite configuration
-```
-
 ## Getting Started
 
 Follow these steps to get a local copy of Wanderlust up and running on your machine.
