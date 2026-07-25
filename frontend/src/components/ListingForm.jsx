@@ -143,7 +143,7 @@ export default function ListingForm({ initialData = {}, onSubmit, loading, submi
                 type="button"
                 onClick={handleGenerateDescription}
                 disabled={aiLoading}
-                className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-violet-500 to-purple-600 text-white text-xs font-semibold rounded-lg hover:shadow-md disabled:opacity-60 transition-all"
+                className="flex items-center gap-2 px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-red-500 disabled:opacity-60 transition-colors"
               >
                 {aiLoading ? (
                   <>
@@ -153,7 +153,7 @@ export default function ListingForm({ initialData = {}, onSubmit, loading, submi
                 ) : (
                   <>
                     <i className="fa-solid fa-wand-magic-sparkles" />
-                    Generate with AI
+                    Write Description
                   </>
                 )}
               </button>
@@ -166,7 +166,7 @@ export default function ListingForm({ initialData = {}, onSubmit, loading, submi
             {!aiError && (
               <p className="text-xs text-gray-400 mb-1">
                 <i className="fa-solid fa-lightbulb mr-1 text-yellow-400" />
-                Fill in Title & Location first, then click Generate with AI
+                Fill in Title & Location first, then click Write Description
               </p>
             )}
             <textarea
@@ -174,7 +174,7 @@ export default function ListingForm({ initialData = {}, onSubmit, loading, submi
               value={form.description}
               onChange={handleChange}
               rows={5}
-              placeholder="Describe what makes your property special... or click Generate with AI above!"
+              placeholder="Describe what makes your property special... or click Write Description above!"
               className={`input-field resize-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all ${aiLoading ? 'opacity-50' : ''}`}
             />
             {errors.description && <p className="text-red-500 text-xs mt-1"><i className="fa-solid fa-exclamation-circle mr-1" />{errors.description}</p>}

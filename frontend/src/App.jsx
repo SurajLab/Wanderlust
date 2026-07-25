@@ -10,7 +10,7 @@ import SignupPage from './pages/SignupPage'
 import VerifyEmailPage from './pages/VerifyEmailPage'
 import ErrorPage from './pages/ErrorPage'
 import { useAuth } from './context/AuthContext'
-
+import TravelPlannerPage from './pages/TravelPlannerPage'
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth()
   if (loading) return <div className="flex justify-center items-center h-64"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-primary" /></div>
@@ -33,6 +33,7 @@ export default function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/verify-email" element={<VerifyEmailPage />} />
           <Route path="*" element={<ErrorPage message="Page Not Found!" />} />
+          <Route path="/planner" element={<TravelPlannerPage />} />
         </Routes>
       </main>
       <Footer />
