@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-1 pb-20">
+      <main className="flex-1 pb-6">
         <Routes>
           <Route path="/" element={<Navigate to="/listings" replace />} />
           <Route path="/listings" element={<ListingsPage />} />
