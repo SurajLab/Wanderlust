@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 pt-8 pb-6">
 
         {/* Top grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-10">
 
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -73,20 +73,20 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div className="lg:col-span-2">
             <h4 className="font-semibold text-gray-900 mb-3 text-sm">Subscribe to our newsletter</h4>
             <p className="text-xs text-gray-500 mb-3">Get travel tips and exclusive deals in your inbox.</p>
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 w-full">
               <input
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+                className="flex-1 min-w-0 px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
               <button
                 onClick={() => { setEmail(''); alert('Subscribed!') }}
-                className="px-3 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-red-500 transition-colors whitespace-nowrap"
+                className="px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-red-500 transition-colors whitespace-nowrap"
               >
                 Subscribe
               </button>
