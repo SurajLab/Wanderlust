@@ -48,7 +48,6 @@ export default function MapBox({ listing }) {
 
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-3">Where you'll be</h3>
       <div ref={mapContainer} id="map" className="rounded-xl h-72" />
     </div>
   )
