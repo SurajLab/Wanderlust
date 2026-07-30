@@ -113,15 +113,12 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [showTax, setShowTax] = useState(false)
 
-  const isListingsPage = location.pathname === '/listings'
-
-  // Listen to scroll only on listings page
   useEffect(() => {
-    if (!isListingsPage) { setScrolled(false); return }
     const onScroll = () => setScrolled(window.scrollY > 80)
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [isListingsPage])
+  }, [])
 
   const handleLogout = async () => {
     try {
