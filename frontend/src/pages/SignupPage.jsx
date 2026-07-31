@@ -144,17 +144,24 @@ export default function SignupPage() {
                 </div>
               ))}
             </div>
-            <div className="flex items-center gap-3 bg-white/90 backdrop-blur rounded-2xl px-4 py-3 w-fit shadow-md">
-              <div className="flex -space-x-2">
-                {AVATARS.map((src, i) => (
-                  <img key={i} src={src} alt="user" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-                ))}
-                <div className="w-8 h-8 rounded-full bg-primary border-2 border-white flex items-center justify-center">
-                  <span className="text-white text-[9px] font-bold">10K+</span>
-                </div>
-              </div>
-              <p className="text-xs text-gray-700 font-medium">Join thousands of travelers finding their perfect stay</p>
-            </div>
+            <div className="flex items-center gap-3 bg-white/90 backdrop-blur rounded-2xl px-4 py-3 w-fit max-w-xs shadow-md">
+  <div className="flex -space-x-2 flex-shrink-0">
+    {AVATARS.map((src, i) => (
+      <img
+        key={i}
+        src={src}
+        alt="user"
+        className="w-8 h-8 rounded-full border-2 border-white object-cover flex-shrink-0"
+      />
+    ))}
+    <div className="w-8 h-8 rounded-full bg-primary border-2 border-white flex items-center justify-center flex-shrink-0">
+      <span className="text-white text-[9px] font-bold">10K+</span>
+    </div>
+  </div>
+  <p className="text-xs text-gray-700 font-medium leading-snug flex-1">
+    Join thousands of travelers finding their perfect stay
+  </p>
+</div>
           </div>
         </div>
 
